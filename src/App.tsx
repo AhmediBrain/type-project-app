@@ -1,33 +1,20 @@
 import React from 'react'
-import ProjectFileLogin from './pages/ProjectFileLogin';
 import styled from 'styled-components'
-//import './App.css';
-//import ImageSlider from './components/ImageSlider';
-//import Search from './components/Search';
-//import TodoList from './components/TodoList';
-
-//import { ProjectFile, Subject } from "./pages/ProjectFile.tsx";
-
+import ProjectCreateUser from './pages/createuserpages/ProjectCreateUser';
+import UserLoginPage from './pages/loginpages/UserLoginPage';
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 2%;
-  justify-content: space-around;
+  align-items: center;
 `
 
-const App: React.FC = () => {
+const App: React.FunctionComponent = () => {
   return (
     <Container>
-      {/*<h1> Slider App </h1>
-      <TodoList></TodoList>
-      <h1> Todo App </h1>
-      <ImageSlider></ImageSlider>
-      <Search />*/}
-      {/* <ProjectFile name='Jason' age='24' subject={Subject.Accounting} /> */}
-
-      <ProjectFileLogin name='Bennett' age={25} />
-
+      <ProjectCreateUser page='Create User' />
+      <UserLoginPage page='Login' />
     </Container>
   );
 }
